@@ -5,7 +5,7 @@
 
 **Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani, Mubarak Shah
 
-**MIA 202**
+**MIA 2025**
 
 **Paper:** [ArXiv](https://arxiv.org/abs/)
 
@@ -25,8 +25,8 @@ cd AttriDet
 Conda
 Install requirements.txt in a Python>=3.7.16 environment, require PyTorch version 1.13.1 with CUDA version 11.7 support. The environment can be installed and activated with:
 ```
-conda create --name AttriDet python=3.7.16
-conda activate AttriDet
+conda create --name SLA_Det python=3.7.16
+conda activate SLA_Det
 pip install -r requirements.txt  # install
 ```
 
@@ -80,7 +80,7 @@ Phase 2: Pre-trained weights used for further training # 30 Epochs
 
 # Phase 1: Model pre-train
 The first phase of training consists in the pre-training of the model. Training can be performed by running the following bash script:
-
+Pre_trained weights can be downloaded from [here.]([[https://drive.google.com/drive/folders/1GTmefJJQyVaZ3qaCdfhvryWX9kNdKP80?usp=sharing](https://drive.google.com/drive/folders/1VJSM5d1ndKtz4AQy7zQfnVGyiyGjRl8W?usp=sharing)](https://drive.google.com/drive/folders/1Bg62RFVXwcoJP2VS3eqn1dIISwv1HHFo?usp=sharing))
 ```
 python pre_train.py \
  --name AttriDet_Phase1 \
@@ -89,16 +89,17 @@ python pre_train.py \
  --epochs 100 \
  --data data/WBC_pre.yaml \
  --hyp data/hyps/hyp.scratch-high.yaml
- --weights pre_trained_100x.pt
+ --weights yolov5x.pt
 ```
 
 # Phase 2: Pre-trained weights used for further training 
 The Pre-trained weights used for further training. Training can be performed by running the following bash script:
 
+
 ```
 python train.py \
  --name AttriDet_Phase2 \
- --batch 8 \
+ --batch 4 \
  --imgsz 640 \
  --epochs 30 \
  --data data/WBC_v1.yaml \
