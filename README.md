@@ -7,6 +7,8 @@
 
 **MIA 2025**
 
+**This is the Journal version of the "A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability (MICCAI-2024)"
+
 **Paper:** [ArXiv](https://arxiv.org/abs/)
 
 **Abstract:** _ELeukemia is 10th most frequently diagnosed cancer and one of the leading causes of cancer-related deaths worldwide. Realistic analysis of Leukemia requires White Blook Cells (WBC) localization, classification, and morphological assessment. Despite deep learning advances in medical imaging, leukemia analysis lacks a large, diverse multi-task dataset, while existing small datasets lack domain diversity, limiting real-world applicability. To overcome dataset
@@ -18,8 +20,8 @@ We recommend the use of a Linux machine equipped with CUDA-compatible GPUs. The 
 
 Clone repo:
 ```
-git clone [https://github.com/intelligentMachines-ITU/SLA-Det_large_leukemia_dataset.git]
-cd SLA-Det_large_leukemia_dataset
+git clone [https://github.com/intelligentMachines-ITU/LLD-Large-Leukemia-dataset-for-microscopic-imagery.git)]
+cd LLD-Large-Leukemia-dataset-for-microscopic-imagery
 ```
  
 Conda
