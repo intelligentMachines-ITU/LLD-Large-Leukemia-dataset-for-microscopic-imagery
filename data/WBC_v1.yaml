@@ -1,7 +1,7 @@
 
-train: SOD_16/images/train
-val: SOD_16/images/test
-test: SOD_16/images/test
+train: ../images/train
+val: ../images/test
+test: ../images/test
 
 
 # number of classes
