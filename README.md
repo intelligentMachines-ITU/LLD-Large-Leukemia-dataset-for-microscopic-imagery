@@ -1,6 +1,6 @@
 # Leveraging Sparse Annotations for Leukemia Diagnosis on the Large Leukemia Dataset
 
-![architecture_AttriDet](https://github.com/intelligentMachines-ITU/Blood-Cancer-Dataset/assets/155678287/e2004432-3411-4eea-bc27-cf2a6a6daab9)
+![architecture_AttriDet](https://github.com/intelligentMachines-ITU/SLA-Det_large_leukemia_dataset/blob/main/SLA_Det_archi2-1.png)
 
 
 **Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani, Mubarak Shah
