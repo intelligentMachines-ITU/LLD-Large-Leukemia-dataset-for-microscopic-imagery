@@ -84,7 +84,7 @@ Phase 2: Pre-trained weights used for further training # 30 Epochs
 
 # Phase 1: Model pre-train
 The first phase of training consists in the pre-training of the model. Training can be performed by running the following bash script:
-Pre_trained weights can be downloaded from [here.]([[https://drive.google.com/drive/folders/1GTmefJJQyVaZ3qaCdfhvryWX9kNdKP80?usp=sharing](https://drive.google.com/drive/folders/1VJSM5d1ndKtz4AQy7zQfnVGyiyGjRl8W?usp=sharing)](https://drive.google.com/drive/folders/1Bg62RFVXwcoJP2VS3eqn1dIISwv1HHFo?usp=sharing))
+Pre_trained weights can be downloaded from [here.](https://drive.google.com/drive/folders/1Bg62RFVXwcoJP2VS3eqn1dIISwv1HHFo?usp=sharing)
 ```
 python pre_train.py \
  --name AttriDet_Phase1 \
