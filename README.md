@@ -5,10 +5,8 @@
 
 **Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani, Mubarak Shah
 
+**This is the journal version of "A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability (MICCAI-2024)"**
 **MIA 2025**
-
-**This is the Journal version of the "A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability (MICCAI-2024)"
-
 **Paper:** [ArXiv](https://arxiv.org/abs/)
 
 **Abstract:** _ELeukemia is 10th most frequently diagnosed cancer and one of the leading causes of cancer-related deaths worldwide. Realistic analysis of Leukemia requires White Blook Cells (WBC) localization, classification, and morphological assessment. Despite deep learning advances in medical imaging, leukemia analysis lacks a large, diverse multi-task dataset, while existing small datasets lack domain diversity, limiting real-world applicability. To overcome dataset
@@ -20,7 +18,7 @@ We recommend the use of a Linux machine equipped with CUDA-compatible GPUs. The 
 
 Clone repo:
 ```
-git clone [https://github.com/intelligentMachines-ITU/LLD-Large-Leukemia-dataset-for-microscopic-imagery.git)]
+git clone https://github.com/intelligentMachines-ITU/LLD-Large-Leukemia-dataset-for-microscopic-imagery.git
 cd LLD-Large-Leukemia-dataset-for-microscopic-imagery
 ```
  
@@ -35,7 +33,7 @@ pip install -r requirements.txt  # install
 # Dataset 
 The sparse LeukemiaAttri dataset can be downloaded from the given link:
 
-[Large Leukemia Dataset]([https://drive.google.com/drive/folders/1GTmefJJQyVaZ3qaCdfhvryWX9kNdKP80?usp=sharing](https://drive.google.com/drive/folders/1VJSM5d1ndKtz4AQy7zQfnVGyiyGjRl8W?usp=sharing))
+[Large Leukemia Dataset](https://drive.google.com/drive/folders/1VJSM5d1ndKtz4AQy7zQfnVGyiyGjRl8W?usp=sharing)
 
 
 # JSON COCO Format
