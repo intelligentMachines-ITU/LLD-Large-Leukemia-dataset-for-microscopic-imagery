@@ -1,15 +1,16 @@
-# A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability
+# Leveraging Sparse Annotations for Leukemia Diagnosis on the Large Leukemia Dataset
 
 ![architecture_AttriDet](https://github.com/intelligentMachines-ITU/Blood-Cancer-Dataset/assets/155678287/e2004432-3411-4eea-bc27-cf2a6a6daab9)
 
 
-**Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani
+**Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani, Mubarak Shah
 
-**MICCAI 2024**
+**MIA 202**
 
-**Paper:** [ArXiv](https://arxiv.org/abs/2405.10803)
+**Paper:** [ArXiv](https://arxiv.org/abs/)
 
-**Abstract:** _Earlier diagnosis of Leukemia can save thousands of lives annually. The prognosis of leukemia is challenging without the morphological information of White Blood Cells (WBC) and relies on the accessibility of expensive microscopes and the availability of hematologists to analyze Peripheral Blood Samples (PBS). Deep Learning based methods can be employed to assist hematologists. However, these algorithms require a large amount of labeled data, which is not readily available. To overcome this limitation, we have acquired a realistic, generalized, and large dataset. To collect this comprehensive dataset for real-world applications, two microscopes from two different cost spectrums (high-cost HCM and low-cost LCM) are used for dataset capturing at three magnifications (100x, 40x, 10x) through different sensors (high-end camera for HCM, middle-level camera for LCM and mobile-phone camera for both). The high-sensor camera is 47 times more expensive than the middle-level camera and HCM is 17 times more expensive than LCM. In this collection, using HCM at high resolution (100x), experienced hematologists annotated 10.3k WBC types (14) and artifacts, having 55k morphological labels (Cell Size, Nuclear Chromatin, Nuclear Shape, etc.) from 2.4k images of several PBS leukemia patients. Later on, these annotations are transferred to other 2 magnifications of HCM, and 3 magnifications of LCM, and on each camera captured images. Along with the LeukemiaAttri dataset, we provide baselines over multiple object detectors and Unsupervised Domain Adaptation (UDA) strategies, along with morphological information-based attribute prediction. The dataset will be publicly available after publication to facilitate the research in this direction._
+**Abstract:** _ELeukemia is 10th most frequently diagnosed cancer and one of the leading causes of cancer-related deaths worldwide. Realistic analysis of Leukemia requires White Blook Cells (WBC) localization, classification, and morphological assessment. Despite deep learning advances in medical imaging, leukemia analysis lacks a large, diverse multi-task dataset, while existing small datasets lack domain diversity, limiting real-world applicability. To overcome dataset
+challenges, we present a large-scale WBC dataset named ‘Large Leukemia Dataset’ (LLD) and novel methods for detecting WBC with their attributes. Our contribution here is threefold. First, we present a large-scale Leukemia dataset collected through Peripheral Blood Films (PBF) from several patients, through multiple microscopes, multi-cameras, and multi-magnification. To enhance diagnosis explainability and medical expert acceptance, each leukemia cell is annotated at 100x with 7 morphological attributes, ranging from Cell Size to Nuclear Shape. Secondly, we propose a multi-task model that not only detects WBCs but also predicts their attributes, providing an interpretable and clinically meaningful solution. Third, we propose a method for WBC detection with attribute analysis using sparse annotations. This approach reduces the annotation burden on hematologists, requiring them to mark only a small area within the field of view. Our method enables the model to leverage the entire field of view rather than just the annotated regions, enhancing learning efficiency and diagnostic accuracy. From diagnosis explainability to overcoming domain-shift challenges, presented datasets could be used for many challenging aspects of microscopic image analysis._
 
 # Installation
 
@@ -30,21 +31,9 @@ pip install -r requirements.txt  # install
 ```
 
 # Dataset 
-LeukemiaAttri dataset can be downloaded from the given link:
+The sparse LeukemiaAttri dataset can be downloaded from the given link:
 
-[H_100x_C1](https://drive.google.com/drive/folders/1GTmefJJQyVaZ3qaCdfhvryWX9kNdKP80?usp=sharing)
-
-[H_100x_C2](https://drive.google.com/drive/folders/1gdP_zikQ8Bo52-nQXBky6LdVCqJmzErN?usp=sharing)
-
-[L_100x_C1](https://drive.google.com/drive/folders/1W1CJdvGoTuF9VkGnXURli0fVZLrTaBbD?usp=sharing)
-
-[L_100x_C2](https://drive.google.com/drive/folders/11pMj05Fba6fj6CJnDSXOUEtMxj4zkc9R?usp=sharing)
-
-[H_40x_C1](https://drive.google.com/drive/folders/1b0ow0uqp32WvRMalrJWfDswxVCjMvPps?usp=sharing)
-
-[H_40x_C2](https://drive.google.com/drive/folders/1o0DiZcsoFI4mMpQMpvsDkU4gm_9ST4rY?usp=sharing)
-
-[L_40x_C2](https://drive.google.com/drive/folders/1Xpbig7gVwfGi4mruBA8JGpddlO8njeeJ?usp=sharing)
+[Large Leukemia Dataset]([https://drive.google.com/drive/folders/1GTmefJJQyVaZ3qaCdfhvryWX9kNdKP80?usp=sharing](https://drive.google.com/drive/folders/1VJSM5d1ndKtz4AQy7zQfnVGyiyGjRl8W?usp=sharing))
 
 
 # JSON COCO Format
@@ -62,7 +51,7 @@ LeukemiaAttri dataset can be downloaded from the given link:
 
 We construct the training and testing set for the yolo format settings, dataset can be downloaded from:
 
-labels prepared in YOLO format but with attributes information as: cls x y w h a1 a2 a3 a4 a5 a6 whereas standard yolo format of labels was cls x y w h 
+labels prepared in YOLO format but with attributes information as: cls x y w h px1 px2 py1 py2 a1 a2 a3 a4 a5 a6 whereas standard yolo format of labels was cls x y w h 
 
 data -> WBC_v1.yaml
 ```
@@ -86,21 +75,21 @@ The model is trained in 2 successive phases:
 
 Phase 1: Model pre-train # 100 Epochs
 
-Phase 2: Pre-trained weights used for further training # 200 Epochs
+Phase 2: Pre-trained weights used for further training # 30 Epochs
 
 
 # Phase 1: Model pre-train
 The first phase of training consists in the pre-training of the model. Training can be performed by running the following bash script:
 
 ```
-python train.py \
+python pre_train.py \
  --name AttriDet_Phase1 \
  --batch 8 \
  --imgsz 640 \
  --epochs 100 \
- --data data/WBC_v1.yaml \
+ --data data/WBC_pre.yaml \
  --hyp data/hyps/hyp.scratch-high.yaml
- --weights yolov5x.pt
+ --weights pre_trained_100x.pt
 ```
 
 # Phase 2: Pre-trained weights used for further training 
@@ -111,7 +100,7 @@ python train.py \
  --name AttriDet_Phase2 \
  --batch 8 \
  --imgsz 640 \
- --epochs 200 \
+ --epochs 30 \
  --data data/WBC_v1.yaml \
  --hyp data/hyps/hyp.scratch-high.yaml
  --weights runs/AttriDet_Phase1/weights/last.pt
