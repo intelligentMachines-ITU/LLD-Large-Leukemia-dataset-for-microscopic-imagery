@@ -5,7 +5,7 @@
 
 **Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani, Mubarak Shah
 
-**This is the journal version of "A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability (MICCAI-2024)"**
+*This is the journal version of "A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability (MICCAI-2024)"*
 
 **Under Review**
 
