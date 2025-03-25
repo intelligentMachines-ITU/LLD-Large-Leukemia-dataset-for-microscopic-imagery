@@ -14,16 +14,16 @@ challenges, we present a large-scale WBC dataset named ‘Large Leukemia Dataset
 
 # Installation
 
-We recommend the use of a Linux machine equipped with CUDA compatible GPUs. The execution environment can be installed through Conda.
+We recommend the use of a Linux machine equipped with CUDA-compatible GPUs. The execution environment can be installed through Conda.
 
 Clone repo:
 ```
 git clone [https://github.com/intelligentMachines-ITU/SLA-Det_large_leukemia_dataset.git]
-cd AttriDet
+cd SLA-Det_large_leukemia_dataset
 ```
  
 Conda
-Install requirements.txt in a Python>=3.7.16 environment, require PyTorch version 1.13.1 with CUDA version 11.7 support. The environment can be installed and activated with:
+Install requirements.txt in a Python>=3.7.16 environment, requiring PyTorch version 1.13.1 with CUDA version 11.7 support. The environment can be installed and activated with:
 ```
 conda create --name SLA_Det python=3.7.16
 conda activate SLA_Det
@@ -108,11 +108,11 @@ python train.py \
 ```
 
 # Testing phase
-once model training will be done, an Attribute_model directory will be created, containing ground truth vs predicted attributes csv files, additionally it will contain the attribute model weights saved with f1 score as best weights whereas last.pt will also be saved. These files and weights will be saved based on validation of model. To get model testing, the last.pt of YOLO and last.pt of attribute model will be used to run the test.py file. In result, in Attribute_model directory, a test subdirectory will be created, containing test.csv of ground truth vs predicted attributes. The yolo weights and testing will be save correspondingly in runs/val/exp.
+once model training will be done, an Attribute_model directory will be created, containing ground truth vs predicted attributes csv files, additionally it will contain the attribute model weights saved with f1 score as best weights whereas last.pt will also be saved. These files and weights will be saved based on validation of model. To get model testing, the last.pt of SLA_Detector and last.pt of attribute model will be used to run the test.py file. In result, in Attribute_model directory, a test subdirectory will be created, containing test.csv of ground truth vs predicted attributes. The yolo weights and testing will be save correspondingly in runs/val/exp.
 
 ```
 python test.py \
- --weights /runs/train/AttriDet/weights//last.pt,
+ --weights /runs/train/SLA_Det/weights//last.pt,
  --data, data/WBC_v1.yaml, 
  --save-csv,
  --imgsz,640
