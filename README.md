@@ -18,7 +18,7 @@ We recommend the use of a Linux machine equipped with CUDA compatible GPUs. The 
 
 Clone repo:
 ```
-git clone https://github.com/AttriDet/AttriDet
+git clone [https://github.com/intelligentMachines-ITU/SLA-Det_large_leukemia_dataset.git]
 cd AttriDet
 ```
  
