@@ -107,7 +107,7 @@ python train.py \
  --imgsz 640 \
  --epochs 30 \
  --data data/WBC_v1.yaml \
- --hyp data/hyps/hyp.scratch-high.yaml
+ --hyp data/hyps/hyp.no-augmentation.yaml
  --weights runs/AttriDet_Phase1/weights/last.pt
 ```
 
