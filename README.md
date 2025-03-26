@@ -103,7 +103,7 @@ The Pre-trained weights used for further training. Training can be performed by 
 ```
 python train.py \
  --name AttriDet_Phase2 \
- --batch 4 \
+ --batch 8 \
  --imgsz 640 \
  --epochs 30 \
  --data data/WBC_v1.yaml \
