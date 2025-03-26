@@ -89,7 +89,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
 
     cell_attribute_model = MyCNN(num_classes=12, dropout_prob=0.5, in_channels=480).to(device)
-    cell_attribute_model.load_state_dict(torch.load(ROOT / "Attribute_model/last_weights_100.pth"))
+    # cell_attribute_model.load_state_dict(torch.load(ROOT / "Attribute_model/last_weights_100.pth"))
     cell_attribute_model.train() 
     
     #step_size = 5
