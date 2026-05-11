@@ -7,9 +7,11 @@
 
 *This is the journal version of "A Large-scale Multi Domain Leukemia Dataset for the White Blood Cells Detection with Morphological Attributes for Explainability (MICCAI-2024)"*
 
-**Under Review**
+**Medical Image Analysis
+Volume 106, December 2025, 103760**
 
 **Paper:** [ArXiv](https://arxiv.org/abs/)
+**Paper:** [Medical image analysis](https://www.sciencedirect.com/science/article/abs/pii/S1361841525003068)
 
 **Hugging Face** [Demo](https://huggingface.co/spaces/ryhm/AttriDet)
 
@@ -121,3 +123,24 @@ python test.py \
  --save-csv,
  --imgsz,640
 ```
+# Citation 
+```
+1:   @article{rehman2025leveraging,
+  title={Leveraging sparse annotations for leukemia diagnosis on the large leukemia dataset},
+  author={Rehman, Abdul and Meraj, Talha and Minhas, Aiman Mahmood and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas and Shah, Mubarak},
+  journal={Medical Image Analysis},
+  pages={103760},
+  year={2025},
+  publisher={Elsevier}
+}
+```
+
+2:   @inproceedings{rehman2024large,
+  title={A large-scale multi domain leukemia dataset for the white blood cells detection with morphological attributes for explainability},
+  author={Rehman, Abdul and Meraj, Talha and Minhas, Aiman Mahmood and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={553--563},
+  year={2024},
+  organization={Springer}
+}
+
